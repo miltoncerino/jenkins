@@ -1,3 +1,10 @@
 # jenkins-server
-Run with:
-docker run --rm -itd --name jenkins -p 8080:8080 -p 50000:50000 jenkins
+####Deploy using
+`. deploy.sh`
+####Destroy using
+`. destroy.sh`
+
+####Use it by opening
+`http://`localhost:8080/`
+####Port forwarding (in case of using a remote server). Run cmd and:
+`ssh -L 8080:localhost:8080 <USER>@<SERVER>`
