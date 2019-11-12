@@ -1,3 +1,4 @@
+echo -e "\e[36m"
 echo "Building Jenkins image..."
 docker build -t jenkins .
 echo "Creating Jenkins container..."

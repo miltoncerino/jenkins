@@ -1,5 +1,6 @@
+echo -e "\e[91m"
 echo "Killing/Removing Jenkins container..."
-docker kill jenkins && \
+docker kill jenkins
 echo "Removing Jenkins image..."
-docker rmi jenkins:latest jenkins/jenkins:lts-alpine
+docker rmi jenkins:latest jenkinsci/blueocean
 echo "DONE"
