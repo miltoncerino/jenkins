@@ -1,31 +1,31 @@
 # jenkins-server
-
-#### Deploy using
+## DEPLOYMENT
+### Deploy using
 ```
 . deploy.sh
 ```
 
-#### Destroy using
+### Destroy using
 ```
 . destroy.sh
 ```
-
-#### Use it by opening
+## USAGE
+### Use it by opening
 ```
 http://localhost:8080/blue
 ```
 
-#### Port forwarding (in case of using a remote server). Run cmd and:
+### Port forwarding (in case of using a remote server). Run cmd and
 ```
 ssh -L 8080:localhost:8080 <USER>@<SERVER>
 ```
 
+## EXTRAS
+### Getting a plugin list
 
-## Getting a plugin list
-
-### Manually create a container:
+#### Manually create a container
 `docker run -p 8080:8080 jenkinsci/blueocean`
-### Get the admin password shown when installing
+#### Get the admin password shown when installing
 ```
 *************************************************************
 *************************************************************
@@ -42,8 +42,8 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 *************************************************************
 *************************************************************
 ```
-### Proceed with the installation, set the new admin credentials as 'admin:admin' and install the suggested plugins
-### Make sure 'jq' is installed and get the plugin list:
+#### Proceed with the installation, set the new admin credentials as 'admin:admin' and install the suggested plugins
+#### Make sure 'jq' is installed and get the plugin list
 `curl -s -k "http://admin:admin@localhost:8080/pluginManager/api/json?depth=1" | jq -r '.plugins[].shortName' | tee plugins.txt`
-### Source
+## SOURCES
 https://technologyconversations.com/2017/06/16/automating-jenkins-docker-setup/
